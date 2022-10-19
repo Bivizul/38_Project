@@ -1,6 +1,7 @@
-package aaa.bivizul.a38project.ui.settings
+package aaa.bivizul.a38project.ui.about
 
-import aaa.bivizul.a38project.ui.spohowwidget.CardSwitch
+import aaa.bivizul.a38project.domain.util.Spohowcon.SPOHOWTA
+import aaa.bivizul.a38project.domain.util.Spohowcon.SPOHOWTV
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -16,8 +17,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun SettingsContent(
-    component: SettingsModel,
+fun AboutContent(
+    component: AboutModel,
     modifier: Modifier = Modifier
 ) {
 
@@ -30,25 +31,20 @@ fun SettingsContent(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "Settings",
+            text = "About",
             style = MaterialTheme.typography.h3,
             textAlign = TextAlign.Center
         )
-        Column(
-            verticalArrangement = Arrangement.spacedBy(16.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            CardSwitch(
-                modifier = modifier,
-                text = "Notifications",
-                state = switchNotifications
-            )
-            CardSwitch(
-                modifier = modifier,
-                text = "Dark theme",
-                state = switchDark
-            )
-        }
+        Text(
+            text = SPOHOWTA,
+            style = MaterialTheme.typography.h5,
+            textAlign = TextAlign.Center
+        )
+        Text(
+            text = SPOHOWTV,
+            style = MaterialTheme.typography.h5,
+            textAlign = TextAlign.Center
+        )
     }
 }
 

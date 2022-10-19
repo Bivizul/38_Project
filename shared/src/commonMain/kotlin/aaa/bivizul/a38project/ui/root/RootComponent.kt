@@ -2,6 +2,8 @@ package aaa.bivizul.a38project.ui.root
 
 import aaa.bivizul.a38project.data.repository.SpohowRepository
 import aaa.bivizul.a38project.data.repository.SpohowsRepository
+import aaa.bivizul.a38project.ui.about.AboutComponent
+import aaa.bivizul.a38project.ui.about.AboutModel
 import aaa.bivizul.a38project.ui.item.ItemComponent
 import aaa.bivizul.a38project.ui.item.ItemModel
 import aaa.bivizul.a38project.ui.list.ListComponent
@@ -54,6 +56,9 @@ class RootComponent constructor(
             is Config.SettingsConfig -> RootModel.Child.SettingsChild(
                 setSettings(componentContext)
             )
+            is Config.AboutConfig -> RootModel.Child.AboutChild(
+                setAbout(componentContext)
+            )
         }
 
     private fun setSpohowp(
@@ -76,6 +81,9 @@ class RootComponent constructor(
         },
         onClickSettings = {
             navigation.push(Config.SettingsConfig)
+        },
+        onClickAbout = {
+            navigation.push(Config.AboutConfig)
         }
     )
 
@@ -104,6 +112,12 @@ class RootComponent constructor(
         componentContext = componentContext,
     )
 
+    private fun setAbout(
+        componentContext: ComponentContext
+    ): AboutModel = AboutComponent(
+        componentContext = componentContext,
+    )
+
     private sealed class Config : Parcelable {
         @Parcelize
         object SpohowpConfig : Config()
@@ -119,5 +133,8 @@ class RootComponent constructor(
 
         @Parcelize
         object SettingsConfig : Config()
+
+        @Parcelize
+        object AboutConfig : Config()
     }
 }

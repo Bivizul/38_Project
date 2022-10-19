@@ -21,47 +21,46 @@ fun MainContent(
     component: MainModel,
     modifier: Modifier = Modifier
 ) {
-    Box(
-        modifier = modifier.padding(16.dp).fillMaxSize(),
+
+    Column(
+        modifier = modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.SpaceAround,
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Icon(
-            imageVector = Icons.Filled.Settings,
-            contentDescription = "Settings",
-            modifier = modifier
-                .clickable { component.onClickSettingsModel() }
-                .align(Alignment.TopEnd),
+        Text(
+            text = SPOHOWAN,
+            modifier = modifier,
+            style = MaterialTheme.typography.h3,
+            textAlign = TextAlign.Center
         )
         Column(
-            modifier = modifier.fillMaxSize(),
-            verticalArrangement = Arrangement.SpaceAround,
+            verticalArrangement = Arrangement.spacedBy(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = SPOHOWAN,
-                modifier = modifier,
+                text = "Let's go",
+                modifier = modifier
+                    .clickable { component.onClickListModel() },
                 style = MaterialTheme.typography.h3,
                 textAlign = TextAlign.Center
             )
-            Row(
+            Text(
+                text = "Settings",
                 modifier = modifier
-                    .clickable { component.onClickListModel() }
-                    .padding(16.dp),
-                horizontalArrangement = Arrangement.spacedBy(48.dp),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    text = "Begin",
-                    modifier = modifier,
-                    style = MaterialTheme.typography.h4,
-                    textAlign = TextAlign.Center
-                )
-                Icon(
-                    imageVector = Icons.Filled.ArrowForward,
-                    contentDescription = null,
-                    modifier = modifier
-                        .scale(2f)
-                )
-            }
+                    .clickable { component.onClickSettingsModel() },
+                style = MaterialTheme.typography.h3,
+                textAlign = TextAlign.Center
+            )
+            Text(
+                text = "About",
+                modifier = modifier
+                    .clickable { component.onClickAboutModel() },
+                style = MaterialTheme.typography.h3,
+                textAlign = TextAlign.Center
+            )
         }
+
+
     }
+
 }

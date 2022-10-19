@@ -6,4 +6,6 @@ interface MainModel {
 
     fun onClickSettingsModel()
 
+    fun onClickAboutModel()
+
 }

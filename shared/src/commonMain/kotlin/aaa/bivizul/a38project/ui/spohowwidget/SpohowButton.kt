@@ -1,6 +1,8 @@
 package aaa.bivizul.a38project.ui.spohowwidget
 
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.MaterialTheme
@@ -19,10 +21,10 @@ fun SpohowButton(
 
     Button(
         onClick = onClick,
-        modifier = modifier,
+        modifier = modifier.height(100.dp).fillMaxWidth(),
         elevation = ButtonDefaults.elevation(),
         shape = MaterialTheme.shapes.small,
-        border = BorderStroke(3.dp, MaterialTheme.colors.onPrimary)
+//        border = BorderStroke(3.dp, MaterialTheme.colors.onPrimary)
     ) {
         Text(
             text = text,

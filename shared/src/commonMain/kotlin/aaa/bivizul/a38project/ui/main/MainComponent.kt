@@ -6,6 +6,7 @@ class MainComponent(
     componentContext: ComponentContext,
     private val onClickList: () -> Unit,
     private val onClickSettings: () -> Unit,
+    private val onClickAbout: () -> Unit,
 ) : MainModel, ComponentContext by componentContext {
 
     override fun onClickListModel() {
@@ -14,6 +15,10 @@ class MainComponent(
 
     override fun onClickSettingsModel() {
         onClickSettings()
+    }
+
+    override fun onClickAboutModel() {
+        onClickAbout()
     }
 
 }

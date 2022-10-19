@@ -1,5 +1,6 @@
 package aaa.bivizul.a38project.ui.root
 
+import aaa.bivizul.a38project.ui.about.AboutModel
 import aaa.bivizul.a38project.ui.item.ItemModel
 import aaa.bivizul.a38project.ui.list.ListModel
 import aaa.bivizul.a38project.ui.main.MainModel
@@ -18,6 +19,7 @@ interface RootModel {
         class ListChild(val component: ListModel) : Child()
         class ItemChild(val component: ItemModel) : Child()
         class SettingsChild(val component: SettingsModel) : Child()
+        class AboutChild(val component: AboutModel) : Child()
     }
 
 }

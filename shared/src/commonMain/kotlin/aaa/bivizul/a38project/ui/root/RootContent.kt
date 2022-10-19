@@ -1,5 +1,6 @@
 package aaa.bivizul.a38project.ui.root
 
+import aaa.bivizul.a38project.ui.about.AboutContent
 import aaa.bivizul.a38project.ui.item.ItemContent
 import aaa.bivizul.a38project.ui.list.ListContent
 import aaa.bivizul.a38project.ui.main.MainContent
@@ -36,6 +37,7 @@ fun RootContent(
             is RootModel.Child.ListChild -> ListContent(component = child.component)
             is RootModel.Child.ItemChild -> ItemContent(component = child.component)
             is RootModel.Child.SettingsChild -> SettingsContent(component = child.component)
+            is RootModel.Child.AboutChild -> AboutContent(component = child.component)
         }
     }
 

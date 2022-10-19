@@ -91,7 +91,7 @@ fun SettingsSwitch(
                 .width(switchSize - 3.dp)
                 .height(switchSize / 2)
                 .indication(MutableInteractionSource(), null)
-                .background(color = color, shape = RoundedCornerShape(100)),
+                .background(color = color, shape = RoundedCornerShape(40)),
             contentAlignment = Alignment.CenterStart
         ) {
 
@@ -99,7 +99,7 @@ fun SettingsSwitch(
 
             val xOffset by transition.animateDp(
                 transitionSpec = {
-                    tween(500, easing = LinearOutSlowInEasing)
+                    tween(400, easing = LinearOutSlowInEasing)
                 }, label = "xOffset"
             ) { state ->
                 when (state) {
@@ -113,7 +113,7 @@ fun SettingsSwitch(
                     .size(this.maxWidth / 2)
                     .offset(x = xOffset, y = 0.dp)
                     .padding(3.dp), elevation = 3.dp,
-                shape = RoundedCornerShape(100),
+                shape = RoundedCornerShape(40),
                 backgroundColor = Color.White,
                 border = BorderStroke(
                     if (currentState == SwitchState.NOT_ENABLED) 0.5.dp else 0.dp,
