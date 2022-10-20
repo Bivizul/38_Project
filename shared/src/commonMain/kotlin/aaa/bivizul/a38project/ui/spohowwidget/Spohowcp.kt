@@ -1,6 +1,5 @@
 package aaa.bivizul.a38project.ui.spohowwidget
 
-import aaa.bivizul.a38project.domain.util.Spohowcon.SPOHOWAN
 import aaa.bivizul.a38project.domain.util.Spohowcon.SPOHOWTS
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.CircularProgressIndicator
@@ -20,10 +19,7 @@ fun Spohowcp(
         verticalArrangement = Arrangement.SpaceAround,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(
-            text = SPOHOWAN,
-            style = MaterialTheme.typography.h2
-        )
+        Logo()
         CircularProgressIndicator(
             modifier = modifier.size(50.dp),
             color = MaterialTheme.colors.primary,

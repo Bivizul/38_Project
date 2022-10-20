@@ -29,5 +29,6 @@ fun SpohowpContent(
             getSpohowact(model.activity, it)
         }
     }
+
     Spohowcp(modifier = modifier)
 }

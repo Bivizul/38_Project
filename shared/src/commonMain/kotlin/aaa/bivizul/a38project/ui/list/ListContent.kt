@@ -33,7 +33,7 @@ fun ListContent(
                 elevation = 0.dp
             ){
                 LazyColumn(
-                    modifier = modifier.padding(horizontal = 8.dp).fillMaxSize(),
+                    modifier = modifier.padding(horizontal = 2.dp).fillMaxSize(),
                     verticalArrangement = Arrangement.spacedBy(8.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
@@ -45,18 +45,18 @@ fun ListContent(
                         ) {
                             Text(
                                 text = "->",
-                                modifier = modifier.weight(1f),
+                                modifier = modifier.weight(0.8f),
                                 fontSize = 32.sp,
                                 textAlign = TextAlign.Center
                             )
                             SpohowButton(
-                                modifier = modifier.weight(4f),
+                                modifier = modifier.weight(5f),
                                 onClick = { component.onClickListItemModel(id = spohowItem.id) },
                                 text = spohowItem.spohowtit
                             )
                             Text(
                                 text = "<-",
-                                modifier = modifier.weight(1f),
+                                modifier = modifier.weight(0.8f),
                                 fontSize = 32.sp,
                                 textAlign = TextAlign.Center
                             )

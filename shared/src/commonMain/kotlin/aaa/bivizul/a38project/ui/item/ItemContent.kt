@@ -48,8 +48,9 @@ fun ItemContent(
                         ) {
                             Text(
                                 text = spohows.spohowtit,
+                                modifier = modifier.padding(vertical = 8.dp),
                                 textAlign = TextAlign.Center,
-                                style = MaterialTheme.typography.h5
+                                style = MaterialTheme.typography.h4
                             )
                             if (spohows.spohowdesc != SPOHOWES){
                                 Text(
@@ -64,7 +65,7 @@ fun ItemContent(
                         items(spohows.spohowin) { spohowin ->
                             Card {
                                 Column(
-                                    modifier = modifier.padding(4.dp)
+                                    modifier = modifier.padding(8.dp)
                                 ) {
                                     Text(
                                         text = spohowin.spohowsubtit,
